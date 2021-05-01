@@ -1,5 +1,10 @@
 const Delivery = require('../../models/delivery');
 
+module.exports = {
+index,
+create
+};
+
 async function index(req, res) {
     const deliveries = await Delivery.find({});
     res.status(200).json(deliveries);
@@ -10,8 +15,4 @@ async function create(req, res) {
     res.status(201).json(delivery);
 }
 
-module.exports = {
-index,
-create
-};
 

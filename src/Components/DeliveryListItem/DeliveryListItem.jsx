@@ -1,35 +1,15 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-import './DeliveryListItem';
+// import React from 'react';
+// import {Link} from 'react-router-dom';
 
-function DeliveryListItem({delivery}) {
+
+function DeliveryListItem({deliveries }) {
     return (
-            <div className='panel panel-default'>
-                <div className="panel-heading">
-                    <h3 className='panel-title'>{delivery.trackNum}</h3>
-                </div>
-            <div className='panel-footer DeliveryListItem-action-panel'>
-            <Link className='btn btn-xs btn-info' to={{
-            pathname: '/details',
-            state: {delivery}
-          }}
-        >
-          DETAILS
-        </Link>
-        <Link
-          className='btn btn-xs btn-warning'
-          to={{
-            pathname: '/edit',
-            state: {delivery}
-          }}
-        >
-          EDIT
-        </Link>
-        <button
-          className='btn btn-xs btn-danger margin-left-10'
-        >
-          REMOVE 
-        </button>
+        
+      <div className="DeliveryListItem">
+      <div className="trackingNum flex-ctr-ctr">{deliveries.trackNum}</div>
+      <div className="name">{deliveries.location}</div>
+      <div className="buy">
+        <span>LBS{deliveries.weight.toFixed(2)}</span>
       </div>
     </div>
     )
