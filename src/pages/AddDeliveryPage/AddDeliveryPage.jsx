@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState, useRef, useEffect } from 'react';
 
-export default function AddDeliveryPage(){
+function AddDeliveryPage(props){
   return(
-    <h1>Add a Delivery to your Route</h1>
-  )
+    <>
+       <h1>Add a Delivery to your Route</h1>
+    </>
+  );
 }
+
+export default AddDeliveryPage;
