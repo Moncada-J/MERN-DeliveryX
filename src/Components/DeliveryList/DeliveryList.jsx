@@ -1,4 +1,5 @@
 // import './DeliveryList.css';
+import React from 'react';
 import DeliveryListItem from '../DeliveryListItem/DeliveryListItem';
 
 export default function DeliveryList ({ deliveries }) {
@@ -6,6 +7,7 @@ export default function DeliveryList ({ deliveries }) {
         <DeliveryListItem 
         key={delivery._id}
         deliveries={delivery}
+        handleDeleteDelivery={delivery.handleDeleteDelivery}
         />
         );
   return (

@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
-import AddDeliveryPage from '../AddDeliveryPage/AddDeliveryPage';
+import React, {useState, useEffect, useRef} from 'react';
+import {Link, useLocation} from 'react-router-dom';
 
-function EditPuppyPage(props) {
+
+function EditDeliveryPage(props) {
     return (
         <>
             <h1> Edit a Delivery</h1>
@@ -9,4 +10,4 @@ function EditPuppyPage(props) {
     );
 }
 
-export default EditPuppyPage;
+export default EditDeliveryPage;

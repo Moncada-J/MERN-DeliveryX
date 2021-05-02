@@ -6,7 +6,6 @@ export default function AddDeliveryPage(props){
     recipName: ' ',
     weight: '3',
     location: ' ',
-    status: 'false'
   });
   const formRef = useRef();
 
@@ -38,6 +37,12 @@ export default function AddDeliveryPage(props){
             <input type="name" className="form-control" name="recipName"
              value={formData.recipName} onChange={handleChange}
             required 
+            />
+         </div>
+         <div className="form-group">
+            <label>Quantity of Items</label>
+            <input type="number" className="form-control" name="itemQty" value={formData.itemQty} onChange={handleChange}
+            required
             />
          </div>
          <div className="form-group">
