@@ -1,19 +1,20 @@
-// import './DeliveryList.css';
-import React from 'react';
+import './DeliveryList.css';
 import DeliveryListItem from '../DeliveryListItem/DeliveryListItem';
+import NavBar from '../../Components/NavBar/NavBar';
 
-export default function DeliveryList ({ deliveries }) {
+export default function DeliveryList ({ deliveries, handleDeleteDelivery, user, setUser}) {
     const d = deliveries.map(delivery => 
-        <DeliveryListItem 
+        <DeliveryListItem
         key={delivery._id}
         deliveries={delivery}
-        handleDeleteDelivery={delivery.handleDeleteDelivery}
+        handleDeleteDelivery={handleDeleteDelivery}
         />
+
         );
-  return (
-    <>
-      <h1>Ready for Delivery</h1>
-      <div>
+        return (
+      <>
+      <NavBar user={user} setUser={setUser} />
+      <div  className="deliveryListItem">
          {d}
       </div>
     </>

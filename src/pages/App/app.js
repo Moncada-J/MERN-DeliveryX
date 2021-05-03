@@ -1,13 +1,14 @@
 import React, { useState, useEffect} from 'react';
-import * as deliveryAPI from '../../utilities/deliveries-api';
-import { Redirect, Route, Switch, useHistory  } from 'react-router-dom';
+import { Route, Switch, Redirect, useHistory  } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
+import * as deliveryAPI from '../../utilities/deliveries-api';
 import AuthPage from '../AuthPage/AuthPage';
 import DeliveryList from '../../Components/DeliveryList/DeliveryList';
 import AddDeliveryPage from '../AddDeliveryPage/AddDeliveryPage';
 import DeliveryDetailsPage from '../DeliveryDetailsPage/DeliveryDetailsPage';
 import EditDeliveryPage from "../EditDeliveryPage/EditDeliveryPage";
 import './App.css';
+
 
 export default function App(props) {
 	const [user, setUser] = useState(getUser());
@@ -57,8 +58,8 @@ export default function App(props) {
                 user={user}
                 setUser={setUser}
                 deliveries={deliveries}
+                handleDeleteDelivery={handleDeleteDelivery}
                 />
-				  
             </Route>
             <Route exact path="/details">
               <DeliveryDetailsPage />

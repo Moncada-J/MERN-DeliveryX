@@ -10,7 +10,7 @@ function DeliveryCard({deliveries}) {
       <div className='panel-body'>
         <dl>
             <dt>Delivery Status</dt>
-          <dd>{deliveries.status}</dd>
+          <dd>{deliveries.status ? 'delivered' : 'not delivered' } </dd>
           <dt>Package Weight</dt>
           <dd>{deliveries.weight} LBS </dd>
           <dt>Recipient Details</dt>

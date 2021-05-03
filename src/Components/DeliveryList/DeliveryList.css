@@ -1,0 +1,12 @@
+body {
+    background: linear-gradient(to top, #bdbfc2 38%, #827d7d 100%);
+}
+.deliveriesTitle {
+    color: yellow;
+    padding-top: 10%;
+}
+.deliveryListItem {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+}

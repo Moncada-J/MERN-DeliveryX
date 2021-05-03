@@ -1,0 +1,38 @@
+.userIcon {
+    color: rgb(216, 216, 90);
+    margin-right: 2vmin;
+    vertical-align: middle;
+    border: 0.4vmin rgb(238, 239, 234) solid;
+    border-radius:50%;
+}
+
+.navText {
+font-size: 2.5vmin;
+display: inline;
+}
+
+.navLink {
+    color: #f0eded;
+    display: flex;
+    align-items: center;
+}
+   a:link {
+  text-decoration: none;
+}
+
+.navTitle {
+    margin-right: 3vmin;
+    color:  rgb(215, 215, 75);
+    font-size: 6vmin;
+    font-style: oblique;
+
+}
+
+/* nav {
+    display: flex;
+    align-items: center;
+} */
+
+body {
+    background-color: linear-gradient(to top, #bdbfc2 38%, #827d7d 100%);
+}

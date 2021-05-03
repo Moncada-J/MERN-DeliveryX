@@ -55,31 +55,28 @@ export default function AddDeliveryPage(props){
            <label>Delivery Location (Greater Seattle Area)</label>
            <select value={formData.location} className="form-control" name="location" onChange={handleChange}>
              <option>
-               SEATTLE
+               Seattle
              </option>
               <option>
-               BELLEVUE
+               Bellevue
              </option>
               <option>
-               KIRKLAND
+               Kirkland
              </option>
               <option>
-               SEATTLE
+               Tacoma
              </option>
               <option>
-               TACOMA
+               Redmond
              </option>
               <option>
-               REDMOND
+               Shoreline
              </option>
               <option>
-               SHORELINE
+               Mill Creek
              </option>
               <option>
-               MILL CREEK
-             </option>
-              <option>
-               LYNNWOOD
+               Lynnwood
              </option>
            </select>
          </div>
