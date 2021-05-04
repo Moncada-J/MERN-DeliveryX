@@ -6,7 +6,7 @@ const deliverySchema = new Schema({
     itemQty: { type: Number, required: true },
     weight: { type: Number, required: true, default: 3 },
     location: { type: String, required: true },
-    status: { type: Boolean, default: false },
+    status: { type: String, default: "In Route", enum: ["In Route", "Delivered to Resident", "Left on Doorstep", "Unable to Deliver"] },
     trackNum: { type: String,   default: function () { return '#' + Math.round((Math.random()
      * 36 ** 12)).toString(36).toUpperCase(); } }
     }, {

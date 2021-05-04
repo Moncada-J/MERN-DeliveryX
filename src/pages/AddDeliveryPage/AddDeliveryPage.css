@@ -1,0 +1,16 @@
+.newDeliveryPageTitle {
+    color: rgb(240, 240, 233);
+    margin-top: 10%;
+}
+
+.newDeliveryForm {
+    color: white;
+}
+
+.newDeliveryBtn {
+    font-size: 18px;
+    background-color: white;
+    border: 0.2vmin solid white;
+    align-items: center;
+    width: 250px;
+}

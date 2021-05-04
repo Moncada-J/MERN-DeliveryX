@@ -10,11 +10,14 @@ function DeliveryCard({deliveries}) {
       <div className='panel-body'>
         <dl>
             <dt>Delivery Status</dt>
-          <dd>{deliveries.status ? 'delivered' : 'not delivered' } </dd>
-          <dt>Package Weight</dt>
-          <dd>{deliveries.weight} LBS </dd>
-          <dt>Recipient Details</dt>
+          <dd>{deliveries.status}</dd>
+          <dt> Weight (lbs)</dt>
+          <dd>{deliveries.weight} </dd>
+          <dt> Item(s) Delivered</dt>
+          <dd>{deliveries.itemQty} </dd>
+          <dt>Recipient Name</dt>
           <dd>{deliveries.recipName}</dd>
+          <dt>Delivery</dt>
           <dd>{deliveries.location}</dd>
         </dl>
       </div>

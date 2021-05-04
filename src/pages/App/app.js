@@ -13,8 +13,6 @@ import './App.css';
 export default function App(props) {
 	const [user, setUser] = useState(getUser());
 	const [deliveries, setDeliveries] = useState([]);
-
-	
 	const history = useHistory();
 
 		useEffect(() => {
@@ -28,18 +26,20 @@ export default function App(props) {
 			}
 			getDeliveries();
 		}, []);
-
+    
 		async function handleAddDelivery(newDelData) {
 				const newDelivery = await deliveryAPI.create(newDelData);
 				setDeliveries([...deliveries, newDelivery]);
 			}
-
-		async function handleUpdateDelivery(updatedDelData) {
-			const updatedDelivery = await deliveryAPI.update(updatedDelData);
-			const newDeliveriesArray = deliveries.map(d => d._id === updatedDelivery._id ? updatedDelivery : d );
-			setDeliveries(newDeliveriesArray);
-		}
-
+      
+      async function handleUpdateDelivery(updatedDelData) {
+        const updatedDelivery = await deliveryAPI.update(updatedDelData);
+        const newDeliveriesArray = deliveries.map(d => {
+          return d._id === updatedDelivery._id ? updatedDelivery : d;
+         });
+          setDeliveries(newDeliveriesArray);
+        } 
+          
 		async function handleDeleteDelivery(id) {
 			await deliveryAPI.deleteOne(id);
 			setDeliveries(deliveries.filter( d => d._id !== id))
@@ -51,7 +51,11 @@ export default function App(props) {
         <>
           <Switch>
             <Route exact path="/deliveries/new">
-              <AddDeliveryPage handleAddDelivery={handleAddDelivery} />
+              <AddDeliveryPage
+                handleAddDelivery={handleAddDelivery}
+                user={user}
+                setUser={setUser}
+              />
             </Route>
             <Route exact path="/deliveries">
               <DeliveryList
@@ -59,7 +63,7 @@ export default function App(props) {
                 setUser={setUser}
                 deliveries={deliveries}
                 handleDeleteDelivery={handleDeleteDelivery}
-                />
+              />
             </Route>
             <Route exact path="/details">
               <DeliveryDetailsPage />

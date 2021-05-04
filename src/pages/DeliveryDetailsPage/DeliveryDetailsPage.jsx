@@ -1,6 +1,6 @@
 import React from 'react';
 import DeliveryCard from '../../Components/DeliveryCard/DeliveryCard';
-import {useLocation} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 
 function DeliveryDetailsPage(props) {
      const { state: {deliveries} } = useLocation();
@@ -11,6 +11,13 @@ function DeliveryDetailsPage(props) {
                     key={deliveries._id}
                     deliveries={deliveries}
              />
+            <Link
+					className='btn btn-sm btn-info editLink'
+					to={{
+						pathname: '/edit',
+						state: { deliveries },
+					}}
+			>MODIFY</Link>
         </>
     );
 }
