@@ -3,6 +3,7 @@ import {Link, useLocation} from 'react-router-dom';
 import './EditDeliveryPage.css';
 
 function EditDeliveryPage(props) {
+    const { state: {deliveries} } = useLocation();
     const location = useLocation();
     const [invalidForm, setValidForm] = useState(true);
     const [formData, setFormData] = useState(location.state.deliveries)
@@ -29,10 +30,10 @@ function EditDeliveryPage(props) {
     
     return (
         <>
-            <h1>Process Delivery Transcript </h1>
-            <form ref={formRef} autoComplete="off" onSubmit={handleSubmit}>
+            <h1 className="editPageTitle">Process the Delivery Transcript </h1>
+            <form ref={formRef} autoComplete="off" onSubmit={handleSubmit} className="editForm">
                 <div className="form-group">
-                    <label>Delivery Status</label>
+                    <label>Update Delivery Status</label>
                  <select 
                     value={formData.status}
                     name="status" 
@@ -44,6 +45,12 @@ function EditDeliveryPage(props) {
                         </option>
                         <option>
                             Left on Doorstep
+                        </option>
+                        <option>
+                            Delivered to Resident Mailbox
+                        </option>
+                          <option>
+                            Delivered to Front Office
                         </option>
                          <option>
                             Unable to Deliver
@@ -58,12 +65,18 @@ function EditDeliveryPage(props) {
             </div>
             <button
             type="submit"
-            className="btn"
+            className="editSubmitBtn"
             disabled={invalidForm}
              >
-          Submit
+          SUBMIT
          </button>
-        <Link to='/'>DISCARD</Link>
+          <Link 
+                className='btn btn-sm btn-info cancelLink'
+                to={{ 
+                    pathname: '/',
+                    state: { deliveries },
+                }} 
+         >CANCEL</Link>
      </form>
     </>
     );

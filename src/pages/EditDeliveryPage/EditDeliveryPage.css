@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Oswald:wght@200&display=swap');
+
+.editPageTitle {
+     margin-top: 30px;
+     color:  #ffce4b;
+     font-size: 52px;
+     font-family: 'Oswald', sans-serif;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: rgb(255, 255, 255);
+}
+
+.editForm {
+    color: white;
+    margin-top: 10%;
+    width: 230px;
+    display: inline-block;
+}
+
+.editSubmitBtn {
+    color: black;
+    background: #ffce4b;
+    margin-right: 10px;
+
+}
+.cancelLink {
+    background: #ffce4b;
+    color: black;
+    width: 150px;
+    margin-right: 5vmin;
+    border: 0.4vmin solid white;
+    display: inline;
+}
