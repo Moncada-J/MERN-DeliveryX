@@ -5,7 +5,7 @@ import { faCube } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
 import * as userService from '../../utilities/users-service';
 import Button from 'react-bootstrap/Button';
-import Navbar from 'react-bootstrap/NavBar';
+import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
 import './NavBar.css';
