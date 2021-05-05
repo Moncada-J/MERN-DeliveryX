@@ -2,7 +2,8 @@
 
 .newDeliveryPageTitle {
     color: #FFCE4B;
-    margin-top: 10%;
+    font-size: 52px;
+    font-family: 'Oswald', sans-serif;
     text-decoration-line: underline;
     text-decoration-style: wavy;
     text-decoration-color: rgb(255, 255, 255);
@@ -20,11 +21,74 @@
     width: 250px;
 }
 
-
 body {
     background: rgb(36, 35, 35);
 }
 
 .newFormLabel {
-    color: white;
+    color: rgb(231, 239, 238);
+    font-size: 12px;
+    margin-top: 10px;
+    width: 50px;
+}
+
+.newFormContainer {
+    /* background-image: url('../../Images/boxes.jpg'); */
+    width: 600px;
+    height: 420px;
+    /* margin-left: 26%; */
+    margin: 0 auto;
+    border: rgb(176, 181, 177) 0.4vmin inset;
+    border-radius: 0.7vmin;
+}
+
+.newFormRow {
+     justify-content: center;
+     align-items: center;  
+}
+
+.newNameInp {
+    margin-right: 5%;
+    width: 230px;
+}
+
+.newNumInp {
+    width: 50px;
+    margin-right: 5%;
+    margin-left: 6%;
+}
+
+.newAddressInp {
+    width: 220px;
+    display: inline-block;
+    margin-right: 5%;
+}
+
+.newSelect {
+        display: inline-block;
+         margin-right: 5%;
+}
+
+.newZipInp {
+    width: 100px;
+}
+
+.newStatus {
+    width: 150px;
+    display: inline-block;
+}
+
+.newBtn {
+    width: 250px;
+    margin-top: 6%;
+    margin-left: 5%;
+    background: #FFCE4B;
+    color: black;
+    border: 0.4vmin solid white;
+}
+
+.newBtn:hover {
+    background: white;
+    color: black;
+    border: 0.4vmin solid rgb(132, 130, 130);
 }
