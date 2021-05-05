@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Oswald:wght@200&display=swap');
+
 .newDeliveryPageTitle {
-    color: rgb(240, 240, 233);
+    color: #FFCE4B;
     margin-top: 10%;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: rgb(255, 255, 255);
 }
 
 .newDeliveryForm {
@@ -13,4 +18,13 @@
     border: 0.2vmin solid white;
     align-items: center;
     width: 250px;
+}
+
+
+body {
+    background: rgb(36, 35, 35);
+}
+
+.newFormLabel {
+    color: white;
 }

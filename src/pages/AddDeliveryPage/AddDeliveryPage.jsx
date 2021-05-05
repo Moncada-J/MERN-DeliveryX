@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Form';
 import Form from 'react-bootstrap/Form';
 import './AddDeliveryPage.css'
 
-export default function AddDeliveryPage(props ) {
+export default function AddDeliveryPage({ handleAddDelivery } ) {
   const [invalidForm, setValidForm] = useState(true);
   const [formData, setFormData] = useState({
     recipName: ' ',
@@ -21,7 +21,7 @@ export default function AddDeliveryPage(props ) {
 
   const handleSubmit = e => {
     e.preventDefault();
-    props.handleAddDelivery(formData);
+    handleAddDelivery(formData);
   }
   
   const handleChange = e => {
@@ -30,137 +30,78 @@ export default function AddDeliveryPage(props ) {
       [e.target.name] : e.target.value
     });
   };
-
   return(
     <>
        <h1 className="newDeliveryPageTitle">Add a Delivery to your Route</h1>
        <span>Disclaimer: Make sure the inputted info matches the package label for each package!</span>
-       {/* <form className="NewDeliveryForm" autoComplete="off" ref={formRef} onSubmit={handleSubmit}>
-         <div className="form-group">
-            <label>Recipient Name</label>
-            <input type="name" className="form-control" name="recipName"
-             value={formData.recipName} onChange={handleChange}
-            required 
-            />
-         </div> */}
-          {/* <div className="form-group">
-                    <label>Delivery Status</label>
-                    <select value={formData.status} className="form-control" name="status" 
-                    onChange={handleChange}>
-                        <option>
-                         Shipped
-                        </option>
-                        <option>
-                         In Route
-                        </option>
-                        <option>
-                         Delivered
-                        </option>
-                    </select>
-                </div>
-         <div className="form-group">
-            <label>Quantity of Items</label>
-            <input type="number" className="form-control" name="itemQty" value={formData.itemQty} onChange={handleChange}
-            required
-            />
-         </div>
-         <div className="form-group">
-            <label>Package Weight</label>
-            <input type="number" className="form-control" name="weight" value={formData.weight} onChange={handleChange}
-            required
-            />
-         </div>
-         <div className="form-group">
-           <label>Delivery Location (Greater Seattle Area)</label>
-           <select value={formData.location} className="form-control" name="location" onChange={handleChange}>
-             <option>
-               Seattle
-             </option>
-              <option>
-               Bellevue
-             </option>
-              <option>
-               Kirkland
-             </option>
-              <option>
-               Tacoma
-             </option>
-              <option>
-               Redmond
-             </option>
-              <option>
-               Shoreline
-             </option>
-              <option>
-               Mill Creek
-             </option>
-              <option>
-               Lynnwood
-             </option>
-           </select>
-         </div>
-          <button 
-          type="submit"
-          className="btn newDeliveryBtn"
-          disabled={invalidForm}
-        >
-          Submit
-        </button>
-    </form> */}
+   
     <Form className="NewDeliveryForm" autoComplete="off" ref={formRef} onSubmit={handleSubmit}>
       <Form.Row>
-        <Form.Group as={Col} controlId="formGridEmail">
-          <Form.Label>Recipient Full Name</Form.Label>
+        <Form.Group as={Col} controlId="formGridName">
+          <Form.Label className="newFormLabel">Recipient Name</Form.Label>
           <Form.Control type="name" placeholder="John Smith" name="recipName"
              value={formData.recipName} onChange={handleChange}
             required />
         </Form.Group>
 
-        <Form.Group as={Col} controlId="formGridPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+        <Form.Group as={Col} controlId="formGridNumber">
+          <Form.Label className="newFormLabel">Package Weight (lbs)</Form.Label>
+          <Form.Control type="number" placeholder="5" name="weight" value={formData.weight} onChange={handleChange}/>
         </Form.Group>
       </Form.Row>
 
       <Form.Group controlId="formGridAddress1">
-        <Form.Label>Address</Form.Label>
+        <Form.Label className="newFormLabel">Recipient Address</Form.Label>
         <Form.Control placeholder="1234 Main St" />
       </Form.Group>
 
       <Form.Group controlId="formGridAddress2">
-        <Form.Label>Address 2</Form.Label>
+        <Form.Label className="newFormLabel">Address 2</Form.Label>
         <Form.Control placeholder="Apartment, studio, or floor" />
       </Form.Group>
 
     <Form.Row>
-      <Form.Group as={Col} controlId="formGridState">
-        <Form.Label>City</Form.Label>
-        <Form.Control as="select" defaultValue="Choose...">
-          <option>Choose...</option>
+      <Form.Group as={Col} controlId="formGridCity">
+        <Form.Label className="newFormLabel">City</Form.Label>
+        <Form.Control as="select" defaultValue="Choose..." select value={formData.location} className="form-control" name="location" onChange={handleChange}>
+          <option>Select...</option>
+          <option>Anacortes</option>
           <option>Bellevue</option>
-          <option>Bellevue</option>
+           <option>Kirkland</option>
+          <option>Mill Creek</option>
+          <option>Redmond</option>
+          <option>Seattle</option>
+          <option>Shoreline</option>
+          <option>Tacoma</option>
         </Form.Control>
       </Form.Group>
 
       <Form.Group as={Col} controlId="formGridState">
-        <Form.Label>State</Form.Label>
+        <Form.Label className="newFormLabel">State</Form.Label>
         <Form.Control as="select" defaultValue="Choose...">
-          <option>Choose...</option>
+          <option>Select...</option>
           <option>WA</option>
         </Form.Control>
       </Form.Group>
 
       <Form.Group as={Col} controlId="formGridZip">
-        <Form.Label>Zip</Form.Label>
-        <Form.Control />
+        <Form.Label className="newFormLabel">Zip</Form.Label>
+        <Form.Control placeholder="1234" />
+      </Form.Group>
+    </Form.Row>
+    <Form.Row> 
+        <Form.Group as={Col} controlId="formGridCity">
+        <Form.Label className="newFormLabel">Delivery Status</Form.Label>
+        <Form.Control as="select" defaultValue="Select..." value={formData.status} className="form-control" name="status" 
+                    onChange={handleChange}>
+          <option>Select</option>
+          <option>Shipped</option>
+          <option>In Route</option>
+        </Form.Control>
       </Form.Group>
     </Form.Row>
 
-    {/* <Form.Group id="formGridCheckbox">
-      <Form.Check type="checkbox" label="Check me out" />
-    </Form.Group> */}
-
-    <Button variant="primary" type="submit">
+    <Button variant="primary" type="submit"  disabled={invalidForm}>
       Submit
     </Button>
   </Form>
