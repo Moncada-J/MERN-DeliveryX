@@ -7,6 +7,7 @@ import DeliveryList from '../../Components/DeliveryList/DeliveryList';
 import AddDeliveryPage from '../AddDeliveryPage/AddDeliveryPage';
 import DeliveryDetailsPage from '../DeliveryDetailsPage/DeliveryDetailsPage';
 import EditDeliveryPage from "../EditDeliveryPage/EditDeliveryPage";
+import NavBar from '../../Components/NavBar/NavBar';
 import './App.css';
 
 
@@ -48,7 +49,9 @@ export default function App(props) {
 	return (
     <main className="App">
       {user ? (
+
         <>
+          <NavBar user={user} setUser={setUser} />
           <Switch>
             <Route exact path="/deliveries/new">
               <AddDeliveryPage
@@ -58,7 +61,7 @@ export default function App(props) {
               />
             </Route>
             <Route exact path="/deliveries">
-              <DeliveryList
+              <DeliveryList className="DeliveryList"
                 user={user}
                 setUser={setUser}
                 deliveries={deliveries}

@@ -4,12 +4,17 @@ import Col from 'react-bootstrap/Form';
 import Form from 'react-bootstrap/Form';
 import './AddDeliveryPage.css'
 
-export default function AddDeliveryPage({ handleAddDelivery } ) {
+export default function AddDeliveryPage(props) {
   const [invalidForm, setValidForm] = useState(true);
   const [formData, setFormData] = useState({
     recipName: ' ',
+    itemQty: '1',
     weight: '3',
-    location: ' ',
+    address: ' ',
+    city: ' ',
+    state: ' ',
+    zip: ' ',
+    status: ' '
   });
   const formRef = useRef();
 
@@ -21,7 +26,7 @@ export default function AddDeliveryPage({ handleAddDelivery } ) {
 
   const handleSubmit = e => {
     e.preventDefault();
-    handleAddDelivery(formData);
+    props.handleAddDelivery(formData);
   }
   
   const handleChange = e => {
@@ -37,38 +42,36 @@ export default function AddDeliveryPage({ handleAddDelivery } ) {
    <div className="newFormContainer">
     <Form className="NewDeliveryForm" autoComplete="off" ref={formRef} onSubmit={handleSubmit}>
       <Form.Row className="newFormRow">
-        <Form.Group as={Col} controlId="formGridName" className='newNameInp' >
+        <Form.Group as={Col} controlId="formGridName" className='newNameInp'>
           <Form.Label className="newFormLabel">Recipient Name</Form.Label>
-          <Form.Control type="name" placeholder="John Smith" name="recipName"
-             value={formData.recipName} onChange={handleChange}
-            required />
+          <Form.Control type="name" placeholder="John Smith" name="recipName" value={formData.recipName} onChange={handleChange} required/>
         </Form.Group>
 
         <Form.Group as={Col} controlId="formGridNumber" className='newNumInp' >
           <Form.Label className="newFormLabel"> Item Count</Form.Label>
-          <Form.Control type="number" placeholder="1" name="itemQty" value={formData.itemQty} onChange={handleChange}/>
+          <Form.Control type="number" placeholder="1" name="itemQty" value={formData.itemQty} onChange={handleChange} required/>
         </Form.Group>
 
         <Form.Group as={Col} controlId="formGridNumber" className='newNumInp' >
           <Form.Label className="newFormLabel"> Weight (lbs)</Form.Label>
-          <Form.Control type="number" placeholder="5" name="weight" value={formData.weight} onChange={handleChange}/>
+          <Form.Control type="number" placeholder="5" name="weight" value={formData.weight} onChange={handleChange} required/>
         </Form.Group>
       </Form.Row>
 
       <Form.Group controlId="formGridAddress1" className='newAddressInp'>
         <Form.Label className="newFormLabel">Recipient Address</Form.Label>
-        <Form.Control placeholder="1234 Main St" />
+        <Form.Control type="text" placeholder="1234 Main St" name="address" value={formData.address} onChange={handleChange} required/>
       </Form.Group>
 
       <Form.Group controlId="formGridAddress2"  className='newAddressInp' >
         <Form.Label className="newFormLabel">Address 2</Form.Label>
-        <Form.Control placeholder="Apartment, studio, or floor" />
+        <Form.Control type="text" placeholder="Apartment, studio, or floor" name="address" value={formData.address} onChange={handleChange}/>
       </Form.Group>
 
     <Form.Row className="newFormRow">
       <Form.Group as={Col} controlId="formGridCity"  className='newSelect' >
         <Form.Label className="newFormLabel">City</Form.Label>
-        <Form.Control as="select" defaultValue="Choose..." select value={formData.location} className="form-control" name="location" onChange={handleChange}>
+        <Form.Control as="select" defaultValue="Choose..." select value={formData.city} name="city" onChange={handleChange} required>
           <option>Select...</option>
           <option>Anacortes</option>
           <option>Bellevue</option>
@@ -81,9 +84,9 @@ export default function AddDeliveryPage({ handleAddDelivery } ) {
         </Form.Control>
       </Form.Group>
 
-      <Form.Group as={Col} controlId="formGridState"  className='newSelect' >
+      <Form.Group as={Col} controlId="formGridState"  className='newSelect'>
         <Form.Label className="newFormLabel">State</Form.Label>
-        <Form.Control as="select" defaultValue="Choose...">
+        <Form.Control as="select" defaultValue="Choose..." select value={formData.state} name="state" onChange={handleChange} required>
           <option>Select...</option>
           <option>WA</option>
         </Form.Control>
@@ -91,21 +94,21 @@ export default function AddDeliveryPage({ handleAddDelivery } ) {
 
       <Form.Group as={Col} controlId="formGridZip"  className='newZipInp' >
         <Form.Label className="newFormLabel">Zip</Form.Label>
-        <Form.Control placeholder="12345" />
+        <Form.Control placeholder="12345" select value={formData.zip} name="zip" onChange={handleChange} required/>
       </Form.Group>
     </Form.Row>
     <Form.Row className="newFormRow"> 
-        <Form.Group as={Col} controlId="formGridCity"  className='newStatus' >
+        <Form.Group as={Col} controlId="formGridStatus"  className='newStatus'  >
         <Form.Label className="newFormLabel">Delivery Status</Form.Label>
-        <Form.Control as="select" defaultValue="Select..." value={formData.status} className="form-control" name="status" 
-                    onChange={handleChange}>
+        <Form.Control as="select" defaultValue="Select..." select value={formData.status} name="status" 
+                    onChange={handleChange} required>
           <option>Select</option>
           <option>Shipped</option>
           <option>In Route</option>
         </Form.Control>
       </Form.Group>
 
-      <Button className="newBtn" variant="primary" type="submit"  disabled={invalidForm}>
+      <Button className="newBtn" type="submit"  disabled={invalidForm}>
         Submit
       </Button>
       </Form.Row>

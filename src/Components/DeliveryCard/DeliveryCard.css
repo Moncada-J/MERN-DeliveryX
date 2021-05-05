@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Oswald:wght@200&display=swap');
+
+.detailsPageTitle {
+    margin-top: 20px;
+     color:  #ffce4b;
+     font-size: 52px;
+     font-family: 'Oswald', sans-serif;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: rgb(255, 255, 255);
+}
+
+.deliveryCard {
+    color: white;
+}
+
+.deliveryCardTitle {
+    color: #a9acaa;
+}
+
+.modifyLink {
+    margin-top: 2vmin;
+    background: #ffce4b;
+    color: black;
+    width: 150px;
+    margin-right: 5vmin;
+    border: 0.4vmin solid white;
+}
+
+.modifyLink:hover {
+    background: white;
+    color: black;
+    border: 0.4vmin solid #FFCE4B;
+}

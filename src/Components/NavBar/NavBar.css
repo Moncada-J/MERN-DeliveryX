@@ -1,38 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
 .userIcon {
-    color: rgb(216, 216, 90);
+    color:#383938;
     margin-right: 2vmin;
     vertical-align: middle;
-    border: 0.4vmin rgb(238, 239, 234) solid;
+    border: 0.3vmin #555957 solid;
     border-radius:50%;
 }
+.appIcon {
+    font-size: 8vmin;
+    padding-right: 2vmin;
+    vertical-align: middle;
+    color: rgb(55, 57, 56);
+}
 
-.navText {
+.navUserText {
 font-size: 2.5vmin;
 display: inline;
 }
 
 .navLink {
-    color: #f0eded;
+    color: #3d413f;
     display: flex;
     align-items: center;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
 }
-   a:link {
-  text-decoration: none;
+.navLink:hover {
+    color: rgb(16, 16, 16);
+    text-decoration: none;
 }
+
 
 .navTitle {
     margin-right: 3vmin;
-    color:  rgb(215, 215, 75);
-    font-size: 6vmin;
+    font-size: 5vmin;
     font-style: oblique;
-
+    font-family: 'Hammersmith One', sans-serif;
+    color: #F33427;
 }
 
-/* nav {
-    display: flex;
-    align-items: center;
-} */
+.navLogOutBtn {
+    border: 0.3vmin #444444 double;
+}
+.navLogOutBtn:hover {
+    background: #dee1d9;
+    border: 0.3vmin #444444 solid;
+    color: #d3c30f;
+}
 
-body {
-    background-color: linear-gradient(to top, #bdbfc2 38%, #827d7d 100%);
+.navbar {
+    background: #FFCE4B;
 }
