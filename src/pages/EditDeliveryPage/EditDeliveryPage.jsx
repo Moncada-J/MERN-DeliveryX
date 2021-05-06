@@ -33,33 +33,33 @@ function EditDeliveryPage(props) {
             <h1 className="editPageTitle">Process the Delivery Transcript </h1>
             <form ref={formRef} autoComplete="off" onSubmit={handleSubmit} className="editForm">
                 <div className="form-group">
-                    <label>Update Delivery Status</label>
-                 <select 
-                    value={formData.status}
-                    name="status" 
-                     className="form-control"
-                      onChange={handleChange}
-                      required>
-                        <option>
-                         Delivered to Resident
-                        </option>
-                        <option>
-                            Left on Doorstep
-                        </option>
-                        <option>
-                            Delivered to Resident Mailbox
-                        </option>
-                          <option>
-                            Delivered to Front Office
-                        </option>
-                         <option>
-                            Unable to Deliver
-                        </option>
-                    </select>
+                    <label className="editLabel">Update Delivery Status</label>
+                    <select 
+                        value={formData.status}
+                        name="status" 
+                        className="form-control editStatus"
+                        onChange={handleChange}
+                        required>
+                            <option>
+                            Delivered to Resident
+                            </option>
+                            <option>
+                                Left on Doorstep
+                            </option>
+                            <option>
+                                Delivered to Resident Mailbox
+                            </option>
+                            <option>
+                                Delivered to Front Office
+                            </option>
+                            <option>
+                                Unable to Deliver
+                            </option>
+                        </select>
                 </div>
                 <div className="form-group">
-                <label>Items Delivered</label>
-                <input type="number" className="form-control" name="itemQty" value={formData.itemQty} onChange={handleChange}
+                <label className="editLabel">Items Delivered</label>
+                <input type="number" className="form-control editItemQty" name="itemQty" value={formData.itemQty} onChange={handleChange}
                 required
                 />
             </div>

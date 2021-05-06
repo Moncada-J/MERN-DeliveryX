@@ -4,9 +4,11 @@ import { getUser } from '../../utilities/users-service';
 import * as deliveryAPI from '../../utilities/deliveries-api';
 import AuthPage from '../AuthPage/AuthPage';
 import DeliveryList from '../../Components/DeliveryList/DeliveryList';
+import DeliveryListNotif from '../../Components/DeliveryListNotif/DeliveryListNotif';
 import AddDeliveryPage from '../AddDeliveryPage/AddDeliveryPage';
 import DeliveryDetailsPage from '../DeliveryDetailsPage/DeliveryDetailsPage';
 import EditDeliveryPage from "../EditDeliveryPage/EditDeliveryPage";
+import ModalPopOut from '../../Components/ModalPopOut/ModalPopOut';
 import NavBar from '../../Components/NavBar/NavBar';
 import './App.css';
 
@@ -67,12 +69,17 @@ export default function App(props) {
                 deliveries={deliveries}
                 handleDeleteDelivery={handleDeleteDelivery}
               />
+              <DeliveryListNotif className="DeliveryListNotif" 
+              user={user}
+              setUser={setUser}
+              />
             </Route>
             <Route exact path="/details">
               <DeliveryDetailsPage />
             </Route>
             <Route exact path="/edit">
               <EditDeliveryPage handleUpdateDelivery={handleUpdateDelivery} />
+              <ModalPopOut handleUpdateDelivery={handleUpdateDelivery}/>
             </Route>
             <Redirect to="/deliveries" />
           </Switch>

@@ -13,15 +13,25 @@
 .editForm {
     color: white;
     margin-top: 10%;
-    width: 230px;
-    display: inline-block;
+    
+}
+.editLabel {
+    display: block;
+}
+.editStatus {
+    width: 252px;
+    display: inline-flex;
+}
+
+.editItemQty {
+    width: 60px;
+    display: inline-flex;
 }
 
 .editSubmitBtn {
     color: black;
     background: #ffce4b;
     margin-right: 10px;
-
 }
 .cancelLink {
     background: #ffce4b;

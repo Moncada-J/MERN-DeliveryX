@@ -10,14 +10,27 @@ const deliverySchema = new Schema(
     city: { type: String, required: true },
     state: { type: String, required: true },
     zip: { type: Number, required: true },
-    status: { type: String, default: "Shipped",
+    status: {
+      type: String,
+      default: "Shipped",
       enum: [
         "Shipped",
         "In Route",
         "Delivered to Resident",
         "Left on Doorstep",
         "Unable to Deliver",
-      ]},
+      ],
+    },
+    priority: {
+      type: String,
+      default: "Medium / 2 Day Prime",
+      enum: [
+        "Urgent / 2PM - 6PM",
+        "High / Overnight",
+        "Medium / 2 Day Prime",
+        "Low / 7 Day",
+      ],
+    },
     trackNum: {
       type: String,
       default: function () {

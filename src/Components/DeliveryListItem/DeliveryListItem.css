@@ -1,24 +1,18 @@
-.panel-title {
-    font-size: 25px;
-    margin-top: 20px;
-    margin-right: 20px;
-    color: rgb(59, 68, 74);
+.listItemTitle {
+    margin-top: 5%;
+    color: #FFCE4B;
+    font-size: 52px;
+    font-family: 'Oswald', sans-serif;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: rgb(255, 255, 255);
 }
 
-.deliveryDiv {
-margin-right: 2vmin;
-font-size: 11px;
-border: rgb(247, 247, 245) solid 0.2vmin;
-padding-bottom: 2vmin;
-border-radius: 2vmin;
-margin-right: 5%;
-background-color:rgba(24, 24, 23, 0.291);
+.deliveryListItem {
+    display: flex;
+    flex-direction: row;
 }
-.packageTitle {
-    margin-top: 4vmin;
-    font-size: 19px;
-    color: white;
-}
+
 
 .detailsLink {
  background-color: rgb(222, 206, 91);
@@ -32,8 +26,4 @@ margin-bottom: 2vmin;
     background-color:rgba(252, 252, 252, 0.756);
     color: rgb(94, 94, 94);
     border: 0.1vmin solid yellow;
-}
-
-.destinationTitle {
-    margin-top: 10%;
 }
