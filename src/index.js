@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import App from "./pages/App/app";
 
 ReactDOM.render(
