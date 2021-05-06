@@ -12,7 +12,6 @@ export default function DeliveryList ({ deliveries, handleDeleteDelivery }) {
         );
         return (
       <>
-      <h1 className="listItemTitle">Ready? Let's Get To Work!</h1>
       <div  className="deliveryListItem">
          {d}
       </div>

@@ -36,7 +36,7 @@ export default function DeliveryListNotif({ user, setUser }) {
         </Toast>
       </Col>
       <Col xs={6}>
-        <Button onClick={() => setShow(true)}><FontAwesomeIcon className="appIcon" icon={faThumbtack} size="3x"/>Notifications</Button>
+        <Button className="notifButton" onClick={() => setShow(true)}><FontAwesomeIcon className="notifIcon" icon={faThumbtack} size="2x"/></Button>
       </Col>
     </Row>
   );

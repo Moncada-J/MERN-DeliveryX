@@ -1,5 +1,5 @@
 .listItemTitle {
-    margin-top: 5%;
+    /* margin-top: 5%; */
     color: #FFCE4B;
     font-size: 52px;
     font-family: 'Oswald', sans-serif;
@@ -13,6 +13,11 @@
     flex-direction: row;
 }
 
+.deliveryListHeader {
+    display: inline-flex;
+    margin-bottom: 5vmin;
+    margin-top: 5vmin;
+}
 
 .detailsLink {
  background-color: rgb(222, 206, 91);
@@ -26,4 +31,39 @@ margin-bottom: 2vmin;
     background-color:rgba(252, 252, 252, 0.756);
     color: rgb(94, 94, 94);
     border: 0.1vmin solid yellow;
+}
+
+.notifIcon {
+    text-align: middle;
+    color: #ecece6;
+    font-size: 40px;
+    animation: spin 3s infinite;
+     animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.notifButton {
+    background-color: rgba(247, 245, 245, 0.085);
+    border-radius: 50%;
+    border: 0.3vmin rgb(208, 179, 32) solid;
+    position: relative;
+    right: 50px;
+    top: 10px;
+}
+
+.notifButton:hover {
+    background-color: rgba(247, 245, 245, 0.085);
+    border: 0.3vmin rgb(242, 241, 235) solid;
+}
+
+.notifIcon:hover {
+    color: #FFCE4B;
 }

@@ -51,7 +51,6 @@ export default function App(props) {
 	return (
     <main className="App">
       {user ? (
-
         <>
           <NavBar user={user} setUser={setUser} />
           <Switch>
@@ -63,15 +62,20 @@ export default function App(props) {
               />
             </Route>
             <Route exact path="/deliveries">
-              <DeliveryList className="DeliveryList"
+              <header className="deliveryListHeader">
+                <DeliveryListNotif
+                  className="DeliveryListNotif"
+                  user={user}
+                  setUser={setUser}
+                />
+                <h1 className="listItemTitle">Ready? Let's Get To Work!</h1>
+              </header>
+              <DeliveryList
+                className="DeliveryList"
                 user={user}
                 setUser={setUser}
                 deliveries={deliveries}
                 handleDeleteDelivery={handleDeleteDelivery}
-              />
-              <DeliveryListNotif className="DeliveryListNotif" 
-              user={user}
-              setUser={setUser}
               />
             </Route>
             <Route exact path="/details">
@@ -79,7 +83,7 @@ export default function App(props) {
             </Route>
             <Route exact path="/edit">
               <EditDeliveryPage handleUpdateDelivery={handleUpdateDelivery} />
-              <ModalPopOut handleUpdateDelivery={handleUpdateDelivery}/>
+              <ModalPopOut handleUpdateDelivery={handleUpdateDelivery} />
             </Route>
             <Redirect to="/deliveries" />
           </Switch>
