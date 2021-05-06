@@ -1,3 +1,5 @@
+
+
 .listItemTitle {
     /* margin-top: 5%; */
     color: #FFCE4B;
@@ -36,7 +38,7 @@ margin-bottom: 2vmin;
 .notifIcon {
     text-align: middle;
     color: #ecece6;
-    font-size: 40px;
+    font-size: 30px;
     animation: spin 3s infinite;
      animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -52,7 +54,7 @@ margin-bottom: 2vmin;
 
 .notifButton {
     background-color: rgba(247, 245, 245, 0.085);
-    border-radius: 50%;
+    border-radius: 15%;
     border: 0.3vmin rgb(208, 179, 32) solid;
     position: relative;
     right: 50px;
