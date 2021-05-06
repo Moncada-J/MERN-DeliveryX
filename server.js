@@ -21,8 +21,8 @@ app.use(express.static(path.join(__dirname, 'build')));
 // Be sure to mount before our routes
 app.use(require('./config/checkToken'));
 
-app.use('/api/deliveries', require('./routes/api/deliveries'));
 app.use('/api/users', require('./routes/api/users'));
+app.use('/api/deliveries', deliveriesRouter);
 
 
 //api routes will go here
