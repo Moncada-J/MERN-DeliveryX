@@ -13,7 +13,7 @@ function DeliveryListItem({deliveries, handleDeleteDelivery }) {
 	<>
 	<div className="cardContainer">
 	<MDBCard style={{
-		 width: '16rem', }} className="deliveryItems">
+		 width: '18rem', }} className="deliveryItems">
 		<MDBCardBody>
 			<MDBCardTitle>Order <strong>{deliveries.trackNum}</strong></MDBCardTitle>
 		</MDBCardBody>

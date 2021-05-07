@@ -77,7 +77,7 @@
 background-color: rgba(84, 84, 82, 0.975);
 color: rgb(227, 227, 221);
  border: 0.3vmin solid rgb(174, 174, 170);
- margin-right: 0.8vmin;
+ display: inline-block;
 }
 
 .custom-listBtn:hover {

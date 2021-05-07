@@ -12,7 +12,7 @@
 .authContainer {
     margin: auto;
     width: 400px;
-    height: 530px;
+    height: 538px;
     border: 1vmin double rgb(31, 30, 30);
     border-radius: 20px;
     background: rgb(223, 224, 225);
@@ -66,5 +66,5 @@
     margin-top: 10px;
 }
 .authRedirectText {
-    font-size: 15px;
+    font-size: 13px;
 }

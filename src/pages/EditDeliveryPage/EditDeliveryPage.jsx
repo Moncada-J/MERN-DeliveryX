@@ -53,7 +53,7 @@ function EditDeliveryPage(props) {
                                 Delivered to Front Office
                             </option>
                             <option>
-                                Unable to Deliver
+                                Unable to be Delivered
                             </option>
                         </select>
                 </div>

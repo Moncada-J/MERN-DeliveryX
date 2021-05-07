@@ -18,7 +18,7 @@ const deliverySchema = new Schema(
         "In Route",
         "Delivered to Resident",
         "Left on Doorstep",
-        "Unable to Deliver",
+        "Unable to be Delivered",
       ],
     },
     priority: {
