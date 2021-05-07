@@ -1,4 +1,5 @@
 import './UserLogOut.css';
+import React from 'react';
 import { logOut } from '../../utilities/users-service';
 
 export default function UserLogOut({ user, setUser }) {

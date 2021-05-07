@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
+import AuthErrorAlert from '../../Components/AuthErrorAlert/AuthErrorAlert';
 
 export default function LogIn({ setUser }) {
 	const [credentials, setCredentials] = useState({
@@ -23,7 +24,7 @@ export default function LogIn({ setUser }) {
 			const user = await usersService.login(credentials);
 			setUser(user);
 		} catch {
-			setError('Log In Failed - Try Again');
+			this.setState({ error: <AuthErrorAlert /> });
 		}
 	}
 
@@ -50,7 +51,7 @@ export default function LogIn({ setUser }) {
 					<button type='submit'>LOG IN</button>
 				</form>
 			</div>
-			<p className='error-message'>&nbsp;{error}</p>
+			&nbsp;{error}
 		</div>
 	);
 }
