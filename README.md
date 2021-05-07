@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# D E L I V E R Y X  📦  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### (MERN Full CRUD Application)
 
-## Available Scripts
+## ~ Overview
 
-In the project directory, you can run:
+This app is a modern technology inspired by the design of Amazon's app for delivery drivers as the user rather than something that focuses on client side retail -- this application focuses on the business side for user experience and user stories. 
 
-### `npm start`
+#### Try Out DeliveryX for Yourself! 😊 => https://delivery-x.herokuapp.com
+<hr>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## ~ App Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### - User authentication for signing up and logging in/out, a user can stay logged in for up to 24 hours before expiration takes place.
 
-### `npm test`
+#### - A user (once logged in) has the ability to create tickets for their shipped packages ready to be delivered, which include some data structures such as: Package Weight, Item Quantity, Recipient Name & Address, Delivery Status and Delivery Priority which is categorized by a delivery timeframe system (similar to Amazon same day delivery, two day delivery, etc). 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### - As a route is fulfilled by the user, they can modify and update the delivery status from "shipped" to a variety of options such as, including: "Delivered on Doorstep", "Unable to Deliver", and "Left with Resident".
 
-### `npm run build`
+#### - A user is welcome by a pinned post as they return to the main page from being redirected after logging in.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### - Lastly, a user has the option to delete any deliveries, for best practice, once they have updated the order to "Delivered" it is suggested they delete the delivery to avoid confusion.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<hr>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Construction of the App
 
-### `npm run eject`
+### ~ Wireframe and ERD Diagram 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![alttext](https://imgur.com/XJXUmda.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### ~ Database Configuration, NPM packages installations, NPM Run Build/Start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Finished Product
+![alttext](https://imgur.com/uMYDV39.png)
+![alttext](https://imgur.com/yp2Hb57.png)
+<hr>
+## ~ Technologies Used
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### JavaScript, JSX, Node Express, MongoDB, React JS, HTML, CSS, Bootstrap, MDBootstrap Material Design and Heroku
 
-## Learn More
+## ~ Implemented Icebox Features
+#### * Notification Box Feature
+#### * Alert Box for Sign Up/Log In Errors
+#### * Inspired Amazon Delivery Status Features
+#### * Categorization of Priority Level (Requires further development)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ~ Additional IceBox Features for Future Developement
+#### * Address Validation API
+#### * As well as, autocompletion API
+#### * Google Maps API for delivery map idea, or tracking the driver
+#### * Avatar API, for the user to upload a picture or by default, an initialized avatar 
+#### * A user profile with configuration settings of sorts
