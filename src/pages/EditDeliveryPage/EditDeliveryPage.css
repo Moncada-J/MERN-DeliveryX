@@ -30,8 +30,9 @@
 
 .editSubmitBtn {
     color: black;
-    background: #ffce4b;
+    background: #3ca5d2;
     margin-right: 10px;
+    border: 0.4vmin solid white;
 }
 .cancelLink {
     background: #ffce4b;
@@ -39,5 +40,6 @@
     width: 150px;
     margin-right: 5vmin;
     border: 0.4vmin solid white;
+    padding: 2vmin;
     display: inline;
 }

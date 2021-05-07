@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Oswald:wght@200&display=swap');
+
+.authPage {
+      padding-top: 5%;
+}
+
+.authTitle {
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+.authContainer {
+    margin: auto;
+    width: 400px;
+    height: 530px;
+    border: 1vmin double rgb(31, 30, 30);
+    border-radius: 20px;
+    background: rgb(223, 224, 225);
+}
+
+.authTitles {
+    font-family: 'Oswald', sans-serif;
+     text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: rgb(255, 255, 255);
+    padding: 1.5vmin;
+    color: rgb(53, 54, 55);
+    background: #ffce4b;
+     font-size: 32px;
+    border: 0.1vmin solid rgb(31, 30, 30);
+    border-radius: 10px;
+    padding: 2vmin;
+     margin-bottom: 20px;
+}
+
+.login {
+    width: 275px;
+    font-size: 12px;
+    margin-left: 60px;
+    margin-top: 25px;
+}
+
+.signup {
+    width: 275px;
+    font-size: 12px;
+    margin-left: 60px;
+    margin-top: 25px;
+    display: flex;
+}
+.appIconAuth {
+    font-size: 45px;
+    margin-right: 10px;
+    color: #eabd41;
+}
+
+.appTitleAuth {
+    margin-right: 20px;
+     font-family: 'Hammersmith One', sans-serif;
+}
+
+.login-btn{
+    margin-top: 40px;
+
+}
+.signup-btn {
+    margin-top: 10px;
+}
+.authRedirectText {
+    font-size: 15px;
+}

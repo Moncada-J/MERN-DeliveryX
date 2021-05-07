@@ -64,8 +64,9 @@ function EditDeliveryPage(props) {
                 />
             </div>
             <button
+    
             type="submit"
-            className="editSubmitBtn"
+            className="editSubmitBtn  btn btn-md"
             disabled={invalidForm}
              >
           SUBMIT

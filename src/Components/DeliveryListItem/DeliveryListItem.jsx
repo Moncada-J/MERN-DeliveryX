@@ -17,7 +17,6 @@ function DeliveryListItem({deliveries, handleDeleteDelivery }) {
 		<MDBCardBody>
 			<MDBCardTitle>Order <strong>{deliveries.trackNum}</strong></MDBCardTitle>
 		</MDBCardBody>
-			<h5 className="listItemSubTitle">Attention: <strong>New Delivery</strong></h5>
 		<MDBListGroup flush>
 			<MDBListGroupItem><FontAwesomeIcon className="listIcon arrowIcon" icon={faLocationArrow} size="2x"/><strong>{deliveries.city}, WA {deliveries.zip}</strong></MDBListGroupItem>
 			<MDBListGroupItem><FontAwesomeIcon className="listIcon exclamIcon" icon={faExclamation} size="3x"/><strong>{deliveries.priority}</strong></MDBListGroupItem>
@@ -31,7 +30,7 @@ function DeliveryListItem({deliveries, handleDeleteDelivery }) {
 							state: { deliveries },
 						}}
 					>MORE</Link>
-			<button className="delete-btn btn btn-md btn-info custom-listBtn" 
+			<button className="delete-btn btn btn-md btn-info custom-listBtn"
 				onClick={() => handleDeleteDelivery(deliveries._id)}>
 					Delete 
 			</button>

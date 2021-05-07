@@ -8,7 +8,6 @@ import DeliveryListNotif from '../../Components/DeliveryListNotif/DeliveryListNo
 import AddDeliveryPage from '../AddDeliveryPage/AddDeliveryPage';
 import DeliveryDetailsPage from '../DeliveryDetailsPage/DeliveryDetailsPage';
 import EditDeliveryPage from "../EditDeliveryPage/EditDeliveryPage";
-import ModalPopOut from '../../Components/ModalPopOut/ModalPopOut';
 import NavBar from '../../Components/NavBar/NavBar';
 import './App.css';
 
@@ -83,13 +82,13 @@ export default function App(props) {
             </Route>
             <Route exact path="/edit">
               <EditDeliveryPage handleUpdateDelivery={handleUpdateDelivery} />
-              <ModalPopOut handleUpdateDelivery={handleUpdateDelivery} />
             </Route>
             <Redirect to="/deliveries" />
           </Switch>
         </>
       ) : (
-        <AuthPage setUser={setUser} />
+        <AuthPage
+         setUser={setUser} />
       )}
     </main>
   );

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { signUp } from '../../utilities/users-service';
+import '../../pages/AuthPage/AuthPage.css';
 import AuthErrorAlert from '../../Components/AuthErrorAlert/AuthErrorAlert';
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl';
@@ -56,7 +57,7 @@ export default class SignUpForm extends Component {
 		return (
 			<>
 			<form autoComplete='off' onSubmit={this.handleSubmit}>
-				<InputGroup size="lg" className="nameInputGroup">
+				<InputGroup size="md" className="nameInputGroup" className="signup">
 					<InputGroup.Prepend>
 						<InputGroup.Text id="inputGroup-sizing-lg"><FontAwesomeIcon 
 						className="userIcon-auth" icon={faUser} size="1x"/></InputGroup.Text>
@@ -65,7 +66,7 @@ export default class SignUpForm extends Component {
 					 placeholder="John Smith" type="name" name='name' value={this.state.name} 
 					onChange={this.handleChange} required />
   				</InputGroup>
-				<InputGroup size="lg" className="emailInputGroup">
+				<InputGroup size="md" className="emailInputGroup" className="signup">
 					<InputGroup.Prepend>
 						<InputGroup.Text id="inputGroup-sizing-lg"><FontAwesomeIcon
 						 className="emailIcon-auth" icon={faAt} size="1x"/></InputGroup.Text>
@@ -74,7 +75,7 @@ export default class SignUpForm extends Component {
 					 placeholder="email@example.com"type="email" name='email' value={this.state.email} 
 					onChange={this.handleChange} required />
   				</InputGroup>
-				<InputGroup size="lg" className="passwordOneInputGroup">
+				<InputGroup size="md" className="passwordOneInputGroup" className="signup">
 					<InputGroup.Prepend>
 						<InputGroup.Text id="inputGroup-sizing-lg"><FontAwesomeIcon
 						 className="passwordIcon-auth" icon={faLock} size="1x"/></InputGroup.Text>
@@ -83,7 +84,7 @@ export default class SignUpForm extends Component {
 					 placeholder="Enter a password"type="password" name='password' 
 					 value={this.state.password} onChange={this.handleChange} required />
   				</InputGroup>
-				<InputGroup size="lg" className="passwordTwoInputGroup">
+				<InputGroup size="md" className="passwordTwoInputGroup" className="signup">
 					<InputGroup.Prepend>
 						<InputGroup.Text id="inputGroup-sizing-lg"><FontAwesomeIcon
 						 className="passwordIcon-auth" icon={faExclamationTriangle} size="1x"/></InputGroup.Text>
@@ -93,6 +94,7 @@ export default class SignUpForm extends Component {
 					 value={this.state.confirm} onChange={this.handleChange}	required />
   				</InputGroup>
 				<Button 
+				className="signup-btn"
 				 variant="outline-warning" type='submit' disabled={disable}>
 						REGISTER
 				</Button>
