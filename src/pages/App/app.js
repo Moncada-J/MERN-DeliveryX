@@ -68,7 +68,7 @@ export default function App(props) {
                   user={user}
                   setUser={setUser}
                 />
-                <h1 className="listItemTitle">Ready? Let's Get To Work!</h1>
+                <h1 className="listItemTitle">Deliveries For You...</h1>
               </header>
               <DeliveryList
                 className="DeliveryList"

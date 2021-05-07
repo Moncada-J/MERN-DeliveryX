@@ -1,38 +1,12 @@
 
 
 .listItemTitle {
-    /* margin-top: 5%; */
     color: #FFCE4B;
     font-size: 52px;
     font-family: 'Oswald', sans-serif;
     text-decoration-line: underline;
     text-decoration-style: wavy;
     text-decoration-color: rgb(255, 255, 255);
-}
-
-.deliveryListItem {
-    display: flex;
-    flex-direction: row;
-}
-
-.deliveryListHeader {
-    display: inline-flex;
-    margin-bottom: 5vmin;
-    margin-top: 5vmin;
-}
-
-.detailsLink {
- background-color: rgb(222, 206, 91);
-color: grey;
- border: 0.1vmin solid white;
-margin-bottom: 2vmin;
- margin-top: 2vmin;
-}
-
-.detailsLink:hover {
-    background-color:rgba(252, 252, 252, 0.756);
-    color: rgb(94, 94, 94);
-    border: 0.1vmin solid yellow;
 }
 
 .notifIcon {
@@ -53,7 +27,7 @@ margin-bottom: 2vmin;
 }
 
 .notifButton {
-    background-color: rgba(247, 245, 245, 0.085);
+    background-color: rgba(247, 245, 245, 0.085)  !important;
     border-radius: 15%;
     border: 0.3vmin rgb(208, 179, 32) solid;
     position: relative;
@@ -62,10 +36,74 @@ margin-bottom: 2vmin;
 }
 
 .notifButton:hover {
-    background-color: rgba(247, 245, 245, 0.085);
+    background-color: rgba(247, 245, 245, 0.085)  !important;
     border: 0.3vmin rgb(242, 241, 235) solid;
 }
 
+.notifButton:active {
+    background-color: rgba(247, 245, 245, 0.085)  !important;
+    border: 0.3vmin rgb(242, 241, 235) solid  !important;
+}
+.notifButton:focus {
+    background-color: rgba(247, 245, 245, 0.085);
+    border: 0.3vmin rgb(242, 241, 235) solid;
+}
 .notifIcon:hover {
     color: #FFCE4B;
+}
+
+.deliveryItems {
+    margin-left: 25%;
+    margin-bottom: 10%;
+    border: 1vmin #efc144 solid;
+    height: 380px;
+}
+.deliveryListItem {
+     /* margin-top: 1rem; */
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.cardContainer {
+    margin-right: 3%;
+}
+.deliveryListHeader {
+    display: inline-flex;
+    margin-bottom: 5vmin;
+    margin-top: 5vmin;
+}
+
+.custom-listBtn{
+background-color: rgba(84, 84, 82, 0.975);
+color: rgb(227, 227, 221);
+ border: 0.3vmin solid rgb(174, 174, 170);
+ margin-right: 0.8vmin;
+}
+
+.custom-listBtn:hover {
+    background-color:rgba(252, 252, 252, 0.332);
+    color: rgb(94, 94, 94);
+    border: 0.1vmin solid rgb(215, 186, 44);
+}
+
+.listIcon {
+    position: relative;
+    right: 15px;
+}
+
+.arrowIcon {
+    color: rgb(72, 143, 188);
+}
+
+.exclamIcon {
+    color: rgb(165, 71, 71);
+}
+
+.truckIcon {
+    color: rgb(92, 144, 92);
+}
+
+.listItemSubTitle  > strong {
+    color: rgb(172, 64, 64);
 }

@@ -18,8 +18,9 @@ export default function NavBar({ user, setUser }) {
 
 	return (
 		<>
+	
 		<Navbar className="navbar">
-				<Navbar.Brand className="navTitle"><FontAwesomeIcon className="appIcon" icon={faCube} size="3x"/>DeliveryX</Navbar.Brand>
+				<Navbar.Brand className="navTitle cssanimation fadeIn"><FontAwesomeIcon className="appIcon" icon={faCube} size="3x"/>DeliveryX</Navbar.Brand>
 		  			&nbsp; | &nbsp;&nbsp;
 				<Nav className="mr-auto">
 					<Nav.Link><Link className="navLink" to="/deliveries">Active Deliveries</Link></Nav.Link>

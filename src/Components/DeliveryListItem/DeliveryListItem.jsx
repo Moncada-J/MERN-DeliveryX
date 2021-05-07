@@ -11,30 +11,33 @@ import './DeliveryListItem.css';
 function DeliveryListItem({deliveries, handleDeleteDelivery }) {
     return (
 	<>
-	<MDBCard style={{ width: '16rem' }} className="deliveryItems">
+	<div className="cardContainer">
+	<MDBCard style={{
+		 width: '16rem', }} className="deliveryItems">
 		<MDBCardBody>
 			<MDBCardTitle>Order <strong>{deliveries.trackNum}</strong></MDBCardTitle>
 		</MDBCardBody>
 		<h5 className="listItemSubTitle">Attention: <strong>New Delivery</strong></h5>
 		<MDBListGroup flush>
-			<MDBListGroupItem><FontAwesomeIcon className="listIcon" icon={faLocationArrow} size="2x"/><strong>{deliveries.city}, WA {deliveries.zip}</strong></MDBListGroupItem>
-			<MDBListGroupItem><FontAwesomeIcon className="listIcon" icon={faExclamation} size="3x"/><strong>{deliveries.priority}</strong></MDBListGroupItem>
-			<MDBListGroupItem><FontAwesomeIcon className="listIcon" icon={faTruck} size="3x"/><strong>{deliveries.status}</strong></MDBListGroupItem>
+			<MDBListGroupItem><FontAwesomeIcon className="listIcon arrowIcon" icon={faLocationArrow} size="2x"/><strong>{deliveries.city}, WA {deliveries.zip}</strong></MDBListGroupItem>
+			<MDBListGroupItem><FontAwesomeIcon className="listIcon exclamIcon" icon={faExclamation} size="3x"/><strong>{deliveries.priority}</strong></MDBListGroupItem>
+			<MDBListGroupItem><FontAwesomeIcon className="listIcon truckIcon" icon={faTruck} size="3x"/><strong>Package {deliveries.status}</strong></MDBListGroupItem>
 		</MDBListGroup>
 		<MDBCardBody>
 		<Link
-						className='btn btn-md btn-info detailsLink'
+						className='btn btn-md btn-info custom-listBtn'
 						to={{
 							pathname: '/details',
 							state: { deliveries },
 						}}
 					>MORE</Link>
-			<button className="delete-btn" 
+			<button className="delete-btn btn btn-md btn-info custom-listBtn" 
 				onClick={() => handleDeleteDelivery(deliveries._id)}>
-					CANCEL 
+					Delete 
 			</button>
 		</MDBCardBody>
 	</MDBCard>
+	</div>
 	</>
 	);
 }
