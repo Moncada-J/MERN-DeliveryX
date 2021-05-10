@@ -51,3 +51,6 @@ This app is a modern technology inspired by the design of Amazon's app for deliv
 #### * Google Maps API for delivery map idea, or tracking the driver
 #### * Avatar API, for the user to upload a picture or by default, an initialized avatar 
 #### * A user profile with configuration settings of sorts
+
+## ~ Project Planning 
+Trello Board - https://trello.com/b/Qxpu9xK6/deliveryx-app
